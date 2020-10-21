@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Using Templates and Slots (MDN)</title>
+  <link rel="stylesheet" href="./style.css"/>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <h1>Using Templates and Slots (MDN)</h1>
+  <!-- Styles are scoped to the template, so its custom h3 styling shouldn't apply here. -->
+  <h3>This is another h3, but it's magenta because template styles have no effect outside the template.</h3>
+  <person-card id="eleanor-shellstrop" person-name="Eleanor Shellstrop" person-age="38" person-email="eleanor@goodplace.universe">
+    <!-- Replace the "catchphrase" slot placeholder with a custom div. -->
+    <div slot="catchphrase" class="catchphrase-slot-eleanor">
+      Ya basic!
+    </div>
+  </person-card>
+  <person-card id="gina-linetti" person-name="Gina Linetti" person-age="42" person-email="linetti.linoutti@99th.nypd.gov">
+    <!-- Replace the "catchphrase" slot placeholder with a custom div. -->
+    <div slot="catchphrase" class="catchprase-slot-gina">
+      But isn't Gina Linetti more of a state of mind?
+    </div>
+  </person-card>
+  <person-card id="gina-dsds" person-name="Dr. John Dorian" person-age="42" person-email="dorian@sacred-heart-hospital.com">
+    <!-- Slot not filled this time => won't show up in the DOM. -->
+  </person-card>
+
+  <style>
+    .catchphrase-slot-eleanor {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20%;
+      padding: 10px;
+      border-radius: 40px;
+      background-color: lightcoral;
+      font-weight: bold;
+    }
+
+    .catchprase-slot-gina {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 85%;
+      padding: 10px;
+      background-color: aquamarine;
+      font-style: italic;
+    }
+  </style>
+</body>
+</html>
+
+<!-- PersonCard template -->
+<template id="person-card-template">
+  <div class="person-card">
+    <h3 id="name"></h3>
+    <div id="age"></div>
+    <div id="email"></div>
+    <!-- Define a slot in the template, whic can be filled using slot="catchphrase" on any element. -->
+    <slot name="catchphrase"></slot>
+    <button id="btn-change-person">Change to Ron Swanson</button>
+  </div>
+
+  <!-- Styles are scoped to this template. -->
+  <style>
+    .person-card {
+      margin: 20px auto;
+      width: 500px;
+      height: 200px;
+      background-color: rgb(243, 243, 243);
+      box-shadow: 3px 3px 5px 3px rgb(230, 228, 228);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 20px;
+      --v-margin: 7px;
+    }
+
+    h3 {
+      color: magenta;
+    }
+
+    button {
+      margin: var(--v-margin);
+    }
+
+    div {
+      margin: var(--v-margin);
+    }
+  </style>
+</template>
