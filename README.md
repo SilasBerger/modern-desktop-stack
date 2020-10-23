@@ -16,4 +16,4 @@ A playground for trying out and learning technologies that might be a good fit f
 - [Another Electron + Stencil starter](https://github.com/edgeworkscreative/stencil-electron-app-starter)
 
 ## ℹ️ About
-I am having a first (potentially brief) look at some of these technologies. This means that not all my notes and comments will be accurate or complete. Also, I don't yet know whether these technologies even fit together to form a reasonable stack for desktop application development, which is why I consider this only a playground.
+I am getting a first, high-level overview of some of these technologies. This means that not all my notes and comments will be accurate or complete. Also, I don't yet know whether these technologies even fit together to form a reasonable stack for desktop application development, which is why I consider this only a playground.
