@@ -27,7 +27,7 @@ To implement some function of a web (or Node.js) application with WASM without u
 - Assemble the `.wat` file using the `wat2wasm` tool from WABT to get a `.wasm` binary
 
 ## The Example
-WAT input file: [add.wat](wasm-by-hand/add.wat)
+The contents of our WebAssembly file ([add.wat](add.wat)) look as follows:
 ```wat
 (module
   (func $add (param $lhs i32) (param $rhs i32) (result i32)

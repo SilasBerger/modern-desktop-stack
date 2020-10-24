@@ -1,6 +1,6 @@
 # Rust + WASM
 ## 📦 Projects
-- [wasm-by-hand](wasm-by-hand): A first example of a web application using WASM, without using high-level languages or build tools.
+- [1-wasm-by-hand](1-wasm-by-hand): A first example of a web application using WASM, without using high-level languages or build tools.
 
 ## 📓 Study Notes
 ### A Note on Instantiating
