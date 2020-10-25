@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced WASM</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="native.js" defer></script>
+  <script src="components.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="main-container">
+    <h1 class="title">Advanced WASM</h1>
+    <on-screen-console id="console">
+    </on-screen-console>
+  </div>
+</body>
+</html>
+
+<template id="template-console">
+  <div class="console-window">
+    <div class="container"></div>
+  </div>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .console-window {
+      width: 60vw;
+      height: 600px;
+      border-radius: 20px;
+      box-shadow: 2px 2px 10px 2px #dbdbdb;
+      background-color: #97e5cf;
+      padding: 40px 50px;
+      color: #5a4f5c;
+      font-family: "Source Code Pro";
+      font-size: 1.2rem;
+    }
+
+    .container {
+      width: 100%;
+      height: 100%;
+      overflow: scroll;
+    }
+  </style>
+</template>
+
+<template id="template-console-line">
+  <div class="container">
+    <div class="chevron">></div>
+    <div class="text"></div>
+  </div>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .container {
+      padding: 7px 0;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .chevron {
+      padding-right: 7px;
+    }
+  </style>
+</template>
